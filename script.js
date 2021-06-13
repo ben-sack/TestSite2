@@ -14,7 +14,13 @@ spans.forEach((span, idx) => {
 	}, 750 * (idx+1))
 });
 
+ 
 function showMenu(){
-	document.getElementById('nav-wrapper').style.visibility = 'visible'
-	console.log('it works')
+
+	setTimeout(function(){document.getElementById('li1').style.visibility = 'visible'},1000)
+	setTimeout(function(){document.getElementById('li2').style.visibility = 'visible'},1500)
+	setTimeout(function(){document.getElementById('li3').style.visibility = 'visible'},2000)
+
+	//document.getElementById('menu-wrapper').style.visibility = 'hidden'
 }
+
