@@ -1,4 +1,4 @@
-const spans = document.querySelectorAll('.word span');
+const spans = document.querySelectorAll('.main-container span');
 
 spans.forEach((span, idx) => {
 	span.addEventListener('click', (e) => {
@@ -13,3 +13,8 @@ spans.forEach((span, idx) => {
 		span.classList.add('active');
 	}, 750 * (idx+1))
 });
+
+function showMenu(){
+	document.getElementById('nav-wrapper').style.visibility = 'visible'
+	console.log('it works')
+}
