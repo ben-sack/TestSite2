@@ -1,48 +1,77 @@
+@font-face {
+	font-family: 'Londrina Outline';
+	src: url('fonts/LondrinaOutline-Regular.ttf') format('woff2');
+}
+
 :root{
-	--mainCoLor:#eaeaea;
+	--mainColor: #fed8b1;
+	--mainText: black;
+	--themeDotBordder:#24292e;
 	--borderCoLor:#c1c1c1;
 }
 
-
-a:link{
+a{
     text-decoration: none;
-    color: black;
+    color: var(--mainText);
+}
+a:hover{
+	animation: .8s shake infinite alternate;
+	transform: scale(1.3);
+	transition-duration: 1s;
 }
 a:visited{
     text-decoration: none;
-    color: black;
-}
-.menu:hover{
-	transform: scale(1.1);
-	overflow: hidden;
+    color: var(--mainText);
 }
 
-a, h1, h2, h3, h4, h5, h6{
-    font-family: 'Londrina Outline', cursive;
+#menu-wrapper:hover{
+	overflow: hidden;
+
+}
+
+span, a, h1, h2, h3, h4, h5, h6{
+	font-family: 'Londrina Outline', cursive;
+	text-align: center;
 	font-weight: 500;
 }
 
 p, li, label, input, textarea{
-    font-family: 'Londrina Outline', cursive;
+	font-family: 'Londrina Outline', cursive;
 	font-weight: 500;
+
     
 }
 
-.s2{
-    background-color: var(--mainCoLor);
-    border-bottom: 1px solid var(--borderCoLor);
+h1 {font-size: 56px;}
+h2 {font-size: 36px;}
+h3 {font-size: 28px;}
+h4 {font-size: 24px;}
+h5 {font-size: 20px;}
+h6 {font-size: 16px;}
+li {font-size: 38px;}
 
+body {
+	background-color: var(--mainColor);
+	color: var(--mainText);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 100vh;
+    margin: 0;
+	overflow: hidden;
+	visibility: hidden;
+	font-family: 'Londrina Outline', cursive;
 }
 
 .menu{
-    font-family: 'Londrina Outline', cursive;
     font-size: 100px;
     vertical-align: top;
     margin: 0;
     position: absolute;
     top: 0;
     right: 0;
-    padding-right: 35px;
+    padding-right: 25px;
 	overflow: hidden;
 	
 }
@@ -57,12 +86,26 @@ ul li{
 	font-size: 30px;
 }
 
-
-.main-container {
-    font-family: 'Londrina Outline', cursive;
-    perspective: 1000px;
-    
+#content1{
+	position: relative;
+	top: 25px;
 }
+#content2{
+	position: relative;
+	top: 50px;
+}
+
+.footer{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 10px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
 
 .main-container span {
 	cursor: pointer;
@@ -71,12 +114,10 @@ ul li{
 	user-select: none;
 	line-height: 0.8;
 }
-
 .main-container span:nth-child(1).active {
 	animation: balance 1.5s ease-out;
 	transform-origin: bottom left;
 }
-
 @keyframes balance {
 	0%,
 	100% {
@@ -87,12 +128,10 @@ ul li{
 		transform: rotate(-45deg);
 	}
 }
-
 .main-container span:nth-child(2).active {
 	animation: shrinkjump 1s ease-in-out;
 	transform-origin: bottom center;
 }
-
 @keyframes shrinkjump {
 	10%,
 	35% {
@@ -106,12 +145,10 @@ ul li{
 		transform: scale(1) translate(0, 0);
 	}
 }
-
 .main-container span:nth-child(3).active {
 	animation: falling 2s ease-out;
 	transform-origin: bottom center;
 }
-
 @keyframes falling {
 	12% {
 		transform: rotateX(240deg);
@@ -133,11 +170,9 @@ ul li{
 		transform: rotateX(0deg);
 	}
 }
-
 .main-container span:nth-child(4).active {
 	animation: rotate 1s ease-out;
 }
-
 @keyframes rotate {
 	20%,
 	80% {
@@ -147,11 +182,9 @@ ul li{
 		transform: rotateY(360deg);
 	}
 }
-
 .main-container span:nth-child(5).active {
 	animation: toplong 1.5s linear;
 }
-
 @keyframes toplong {
 	10%,
 	40% {
@@ -166,7 +199,6 @@ ul li{
 	animation: falling 2s ease-out;
 	transform-origin: bottom center;
 }
-
 @keyframes falling {
 	12% {
 		transform: rotateX(240deg);
@@ -191,7 +223,6 @@ ul li{
 .main-container span:nth-child(7).active {
 	animation: rotate 1s ease-out;
 }
-
 @keyframes rotate {
 	20%,
 	80% {
@@ -202,7 +233,6 @@ ul li{
 		transform: rotateY(360deg);
 	}
 }
-
 @keyframes balance {
 	0%,
 	100% {
@@ -214,28 +244,7 @@ ul li{
 		transform: rotate(-45deg);
 	}
 }
-
-body {
-	background-color: #fed8b1;
-	color: black;
-	display: flex;
-	font-family: "Roboto", sans-serif;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	height: 100vh;
-    margin: 0;
-	overflow: hidden;
-}
-
-.fixed {
-	position: fixed;
-	top: 40px;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-#hide-me {
+/* #hide-me {
     -webkit-animation: cssAnimation 8s forwards; 
     animation: cssAnimation 7s forwards;
 }
@@ -248,4 +257,97 @@ body {
     0%   {opacity: 1;}
     90%  {opacity: 1;}
     100% {opacity: 0;}
+} */
+
+#theme-options-wrapper{
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+
+.theme-dot{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 5px;
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    cursor: pointer;
+    border: 2px solid var(--themeDotBordder);
+}
+
+.theme-dot:hover{
+    transform: scale(1.3);
+}
+
+
+#light-mode{
+    background-color: #fed8b1;
+}
+#blue-mode{
+    background-color: #192734;
+}
+#green-mode{
+    background-color: #78866b;
+}
+#purple-mode{
+    background-color: #7e4c74;
+}
+
+#menu-wrapper:hover{
+	animation: .8s shake infinite alternate;
+}
+#li1:hover{
+	animation: .8s shake infinite alternate;
+}
+#li2:hover{
+	animation: .8s shake infinite alternate;
+}
+#li3:hover{
+	animation: .8s shake infinite alternate;
+}
+  @keyframes shake {
+	0% { transform: skewX(-15deg); }
+	5% { transform: skewX(15deg); }
+	10% { transform: skewX(-15deg); }
+	15% { transform: skewX(15deg); }
+	20% { transform: skewX(0deg); }
+	100% { transform: skewX(0deg); }  
+  }
+
+.shop {
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	text-align:center;
+	font-family:monospace;
+	perspective:50vw;
+}
+  
+.shop span {
+	display:block;
+	font-size:20vw;
+	animation:number 5s linear infinite;
+}
+@keyframes number {
+	100% { transform:rotateY(360deg); }
+}
+
+
+#delay-text{
+	font-size: 9px;
+	position: absolute; 
+	left: 50px;
+	top: 50px; 
+	font-family: 'Courier New', Courier, monospace; 
+	font-style: italic;
+	animation: appear 8s forwards;
+}
+
+@keyframes appear {
+	0% {opacity: 0;}
+	100%{opacity: 1;}
 }
