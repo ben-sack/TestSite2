@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Ben Sack</title>
 
@@ -7,90 +8,84 @@
     initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
 
-    
+
     <link rel="stylesheet" type="text/css" href="default.css">
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
 
 </head>
 
-<body style="visibility: hidden; transition: 3s;">
+    <body style="visibility: hidden;">
 
-    <div id="theme-options-wrapper">
-        <div data-mode="light"  id="light-mode" class="theme-dot"></div>
-        <div data-mode="blue"  id="blue-mode" class="theme-dot"></div>
-        <div data-mode="green"  id="green-mode" class="theme-dot"></div>
-        <div data-mode="purple"  id="purple-mode" class="theme-dot"></div>
-    </div>
-
-    <div>
-
-        <p  id="delay-text">*Theme settings will be saved<br> for your next visit</p>
-    </div>
-    
-    <section class="s1">
-
-        <div>
-            <a id="menu-wrapper" class="menu" href="#" style="visibility: visible;" onclick="showMenu()">+</a>
-
-            <nav id="nav-wrapper">
-                <ul>
-                    <br>
-                    <li id='li1' style="visibility: hidden;"><a href="#">About</a></li>
-                    <br>
-                    <li id='li2' style="visibility: hidden;"><a href="#">Work</a></li>
-                    <br>
-                    <li id='li3' style="visibility: hidden;"><a href="#">Shop</a></li>
-                </ul>
-            </nav>
-
+        <div id="theme-options-wrapper">
+            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+            <div data-mode="green" id="green-mode" class="theme-dot"></div>
+            <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
         </div>
 
 
-        <div class="main-container">
+        <section class="s1">
 
-            <div id="content1" style="visibility: hidden;">
-                <h1>It's great of you to stop by..</h1>
+            <div>
+                <a id="menu-wrapper" class="menu" href="#" style="visibility: visible;" onclick="showMenu()">+</a>
+
+                <nav id="nav-wrapper">
+                    <ul>
+                        <br>
+                        <li id='li1' style="visibility: hidden;"><a href="#">About</a></li>
+                        <br>
+                        <li id='li2' style="visibility: hidden;"><a href="gallery.html">Photo</a></li>
+                        <br>
+                        <li id='li3' style="visibility: hidden;"><a href="#">Shop</a></li>
+                    </ul>
+                </nav>
+
             </div>
 
-            <div id="content2" style="visibility: hidden;">
-                <h1> if you want ..</h1>
-            </div>
 
-            <div id="main-content" style="visibility: hidden;">
-            
-                <div class="shop">
-                    <span><a href="#">SHOP</a></span>
+            <div class="main-container">
+
+                <div style="visibility: visible; padding-top: 200px; text-align: center;" id="hide-me">
+                    <span>W</span>
+                    <span>E</span>
+                    <span>L</span>
+                    <span>C</span>
+                    <span>O</span>
+                    <span>M</span>
+                    <span>E</span>
+                </div>
+
+                <div id="content1" style="visibility: hidden;">
+                    <h1>It's great of you to stop by..</h1>
+                </div>
+
+                <div id="content2" style="visibility: hidden;">
+                    <h1> if you want ..</h1>
+                </div>
+
+                <div id="main-content" style="visibility: hidden;">
+
+                    <div class="shop">
+                        <span><a href="#">SHOP</a></span>
+                    </div>
+
+
                 </div>
 
 
 
 
 
-
-
+                <div>
+                    <p class="footer">&copy;Ben</p>
+                </div>
             </div>
 
 
+        </section>
 
-            <div style="visibility: visible; padding-bottom: 400px; text-align: center;" id="hide-me">
-                <span>W</span>
-                <span>E</span>
-                <span>L</span>
-                <span>C</span>
-                <span>O</span>
-                <span>M</span>
-                <span>E</span>
-            </div>
+    </body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
-            <div>
-                <p class="footer">&copy;Ben</p>
-            </div>
-        </div>
-
-
-    </section>
-
-</body>
-
-<script type="text/javascript" src="script.js"></script>
 </html>

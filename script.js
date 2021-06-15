@@ -10,8 +10,8 @@ let domReady = (cb) => {
 	document.body.style.visibility = 'visible';
   });
 
-
-const spans = document.querySelectorAll('.main-container span');
+  
+const spans = document.querySelectorAll('.main-container span')
 
 spans.forEach((span, idx) => {
 	span.addEventListener('click', (e) => {
