@@ -1,0 +1,19 @@
+{
+  "name": "mywebsite",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "gallery_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-sack/mywebsite.git"
+  },
+  "author": "Ben Sack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-sack/mywebsite/issues"
+  },
+  "homepage": "https://github.com/ben-sack/mywebsite#readme"
+}

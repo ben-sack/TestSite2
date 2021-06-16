@@ -7,32 +7,22 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
-    <link id='theme-gallery' rel="stylesheet" type="text/css" href="gallery.css">
+    <link id='theme-gallery' rel="stylesheet" type="text/css" href="default.css">
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
 
 </head>
-<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="gallery_script.js"></script>
-<script defer src="script.js"></script>
-<script src="C:\Users\Bensa\node_modules\@swup\head-plugin\dist\SwupHeadPlugin.js"></script>
 
-<script>
-const swup = new Swup({
-	plugins: [new SwupHeadPlugin()]
-  });
-</script>
-<body style="transition: 3s;">
+<body>
 
+    <main id='swup' class="transition-fade" >
 
+        <div id="theme-options-wrapper">
+            <div data-mode="light" id="light-mode" class="theme-dot"></div>
+            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+            <div data-mode="green" id="green-mode" class="theme-dot"></div>
+            <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+        </div>
 
-    <div id="theme-options-wrapper">
-        <div data-mode="light" id="light-mode" class="theme-dot"></div>
-        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-        <div data-mode="green" id="green-mode" class="theme-dot"></div>
-        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
-    </div>
-    <main>
             <div>
                 <a id="back-link" href="/landing.html">back</a>
             </div>
@@ -87,7 +77,11 @@ const swup = new Swup({
 
     </main>
 
-</bod>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+<script src="script.js"></script>
+
 
 
 </html>

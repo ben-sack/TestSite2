@@ -13,37 +13,32 @@
 
 </head>
 
-<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script defer type="text/javascript" src="script.js"></script>
-
-
     <body>
 
+        <main id='swup' class="transition-fade">
+
+            <div id="theme-options-wrapper">
+                <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+            </div>
 
 
-        <div id="theme-options-wrapper">
-            <div data-mode="light" id="light-mode" class="theme-dot"></div>
-            <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-            <div data-mode="green" id="green-mode" class="theme-dot"></div>
-            <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
-        </div>
-
-        <main>
 
             <section class="s1">
 
                 <div>
-                    <a id="menu-wrapper" class="menu" href="#" style="visibility: visible;" onclick="showMenu()">+</a>
+                    <a id="menu-wrapper" class="menu" href="#" style="visibility: visible;" onclick="toggleMenu()">+</a>
 
                     <nav id="nav-wrapper">
                         <ul>
                             <br>
-                            <li id='li1' style="visibility: hidden;"><a href="#">About</a></li>
+                            <li id='li1'><a href="#">About</a></li>
                             <br>
-                            <li id='li2' style="visibility: hidden;"><a id='photo' href="/gallery.html">Photo</a></li>
+                            <li id='li2'><a id='photo' href="/gallery.html">Photo</a></li>
                             <br>
-                            <li id='li3' style="visibility: hidden;"><a href="#">Shop</a></li>
+                            <li id='li3'><a href="#">Shop</a></li>
                         </ul>
                     </nav>
 
@@ -92,6 +87,9 @@
             </section>
         </main>
     </body>
-
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="welcomescript.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
 </html>
