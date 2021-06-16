@@ -16,23 +16,15 @@ function hideWelcome(){
 }
 setTimeout(hideWelcome,7000)
 
-//Welcome Animation
+//Weclome Animation on first page load
 const spans = document.querySelectorAll('.welcome-container span')
-function animateLetter() {
-	spans.forEach((span, idx) => {
-		span.addEventListener('click', (e) => {
-			e.target.classList.add('active');
-		});
-		span.addEventListener('animationend', (e) => {
-			e.target.classList.remove('active');
-		});
+spans.forEach((span, idx) => {
+	// Initial animation
+	setTimeout(() => {
+		span.classList.add('active');
+	}, 750 * (idx + 1))
+});
 
-		// Initial animation
-		setTimeout(() => {
-			span.classList.add('active');
-		}, 750 * (idx + 1))
-	});
-}
 //Show menu items function
 var l1 = document.getElementById('li1')
 var l2 = document.getElementById('li2')
@@ -146,11 +138,34 @@ function init() {
 		localStorage.setItem('theme', mode)
 	}
 
+	const spans = document.querySelectorAll('.welcome-container span')
+	spans.forEach((span, idx) => {
+		span.addEventListener('click', (e) => {
+			e.target.classList.add('active');
+		});
+		span.addEventListener('animationend', (e) => {
+			e.target.classList.remove('active');
+		});
+	});
+
 	setTimeout(gallery,1)
 };
 
 init();
 document.addEventListener('swup:contentReplaced', init);
+
+// floatup
+var welcome_container = document.getElementById('hide-me')
+function floatup(){
+	welcome_container.classList.add('floatup')
+}
+
+document.addEventListener('swup:pageView', function(){
+	var welcome_container = document.getElementById('hide-me')
+	console.log(welcome_container)
+	welcome_container.classList.add('floatup')
+})
+
 
 // toggles menu item visibility by cheacking length of class list (0 or >0)
 function toggleMenu(){

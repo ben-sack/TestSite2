@@ -111,6 +111,14 @@ ul li{
 	text-align: center;
 }
 
+.floatup{
+	animation: floatup 3s forwards;
+}
+
+@keyframes floatup {
+	from {transform: translateY(0);}
+	to {transform: translateY(-550px);}
+}
 
 .welcome-container span {
 	cursor: pointer;
@@ -249,20 +257,7 @@ ul li{
 		transform: rotate(-45deg);
 	}
 }
-/* #hide-me {
-    -webkit-animation: cssAnimation 8s forwards; 
-    animation: cssAnimation 7s forwards;
-}
-@keyframes cssAnimation {
-    0%   {opacity: 1;}
-    90%  {opacity: 1;}
-    100% {opacity: 0;}
-}
-@-webkit-keyframes cssAnimation {
-    0%   {opacity: 1;}
-    90%  {opacity: 1;}
-    100% {opacity: 0;}
-} */
+
 
 #theme-options-wrapper{
 	position: absolute;
@@ -328,8 +323,6 @@ ul li{
 	animation: appear 2s forwards;
 }
 
-
-
 #li2:hover{
 	animation: .8s shake infinite alternate;
 }
@@ -381,8 +374,9 @@ ul li{
     right: 30px;
     text-decoration: none;
     color: var(--mainText);
-    font-family: 'Londrina Solid', cursive;
+    font-family: 'Londrina Outline', cursive;
     letter-spacing: 1.1px;
+	font-weight: 1000;
 
 }
 
@@ -539,7 +533,6 @@ body{
     justify-content: center;
     margin-left: 10px;
     color: var(--mainText)
-    white-space: pre;
   }
   body .options .option .label .info > div {
     position: relative;
