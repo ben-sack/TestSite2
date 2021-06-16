@@ -10,6 +10,15 @@
 	--borderCoLor:#c1c1c1;
 }
 
+.transition-fade{
+	transition: 0.4s;
+	opacity: 1;
+}
+
+html.is-animating .transition-fade{
+	opacity: 0;
+}
+
 a{
     text-decoration: none;
     color: var(--mainText);
@@ -38,8 +47,6 @@ span, a, h1, h2, h3, h4, h5, h6{
 p, li, label, input, textarea{
 	font-family: 'Londrina Outline', cursive;
 	font-weight: 500;
-
-    
 }
 
 h1 {font-size: 56px;}
@@ -105,14 +112,14 @@ ul li{
 }
 
 
-.main-container span {
+.welcome-container span {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 100px;
 	user-select: none;
 	line-height: 0.8;
 }
-.main-container span:nth-child(1).active {
+.welcome-container span:nth-child(1).active {
 	animation: balance 1.5s ease-out;
 	transform-origin: bottom left;
 }
@@ -126,7 +133,7 @@ ul li{
 		transform: rotate(-45deg);
 	}
 }
-.main-container span:nth-child(2).active {
+.welcome-container span:nth-child(2).active {
 	animation: shrinkjump 1s ease-in-out;
 	transform-origin: bottom center;
 }
@@ -143,7 +150,7 @@ ul li{
 		transform: scale(1) translate(0, 0);
 	}
 }
-.main-container span:nth-child(3).active {
+.welcome-container span:nth-child(3).active {
 	animation: falling 2s ease-out;
 	transform-origin: bottom center;
 }
@@ -168,7 +175,7 @@ ul li{
 		transform: rotateX(0deg);
 	}
 }
-.main-container span:nth-child(4).active {
+.welcome-container span:nth-child(4).active {
 	animation: rotate 1s ease-out;
 }
 @keyframes rotate {
@@ -180,7 +187,7 @@ ul li{
 		transform: rotateY(360deg);
 	}
 }
-.main-container span:nth-child(5).active {
+.welcome-container span:nth-child(5).active {
 	animation: toplong 1.5s linear;
 }
 @keyframes toplong {
@@ -193,7 +200,7 @@ ul li{
 		transform: translateY(-48vh) scaleY(4);
 	}
 }
-.main-container span:nth-child(6).active {
+.welcome-container span:nth-child(6).active {
 	animation: falling 2s ease-out;
 	transform-origin: bottom center;
 }
@@ -218,7 +225,7 @@ ul li{
 		transform: rotateX(0deg);
 	}
 }
-.main-container span:nth-child(7).active {
+.welcome-container span:nth-child(7).active {
 	animation: rotate 1s ease-out;
 }
 @keyframes rotate {

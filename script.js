@@ -1,17 +1,7 @@
-// Helper function that loads content before displays page to avoid
-let domReady = (cb) => {
-	document.readyState === 'interactive' || document.readyState === 'complete'
-	  ? cb()
-	  : document.addEventListener('DOMContentLoaded', cb);
-  };
-  
-  domReady(() => {
-	// Display body when DOM is loaded
-	document.body.style.visibility = 'visible';
-  });
+//Swup (page transitions)
 
-  
-const spans = document.querySelectorAll('.main-container span')
+//Welcome Animation
+const spans = document.querySelectorAll('.welcome-container span')
 
 spans.forEach((span, idx) => {
 	span.addEventListener('click', (e) => {
@@ -20,11 +10,11 @@ spans.forEach((span, idx) => {
 	span.addEventListener('animationend', (e) => {
 		e.target.classList.remove('active');
 	});
-	
+
 	// Initial animation
 	setTimeout(() => {
 		span.classList.add('active');
-	}, 750 * (idx+1))
+	}, 750 * (idx + 1))
 });
 
 //Show menu items function

@@ -8,13 +8,19 @@
     initial-scale=1, maximum-scale=1, minimum-scale=1" />
 
 
-
     <link rel="stylesheet" type="text/css" href="default.css">
     <link id="theme-style" rel="stylesheet" type="text/css" href="">
 
 </head>
 
-    <body style="visibility: hidden;">
+<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script defer type="text/javascript" src="script.js"></script>
+
+
+    <body>
+
+
 
         <div id="theme-options-wrapper">
             <div data-mode="light" id="light-mode" class="theme-dot"></div>
@@ -23,69 +29,69 @@
             <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
         </div>
 
+        <main>
 
-        <section class="s1">
+            <section class="s1">
 
-            <div>
-                <a id="menu-wrapper" class="menu" href="#" style="visibility: visible;" onclick="showMenu()">+</a>
+                <div>
+                    <a id="menu-wrapper" class="menu" href="#" style="visibility: visible;" onclick="showMenu()">+</a>
 
-                <nav id="nav-wrapper">
-                    <ul>
-                        <br>
-                        <li id='li1' style="visibility: hidden;"><a href="#">About</a></li>
-                        <br>
-                        <li id='li2' style="visibility: hidden;"><a href="gallery.html">Photo</a></li>
-                        <br>
-                        <li id='li3' style="visibility: hidden;"><a href="#">Shop</a></li>
-                    </ul>
-                </nav>
+                    <nav id="nav-wrapper">
+                        <ul>
+                            <br>
+                            <li id='li1' style="visibility: hidden;"><a href="#">About</a></li>
+                            <br>
+                            <li id='li2' style="visibility: hidden;"><a id='photo' href="/gallery.html">Photo</a></li>
+                            <br>
+                            <li id='li3' style="visibility: hidden;"><a href="#">Shop</a></li>
+                        </ul>
+                    </nav>
 
-            </div>
-
-
-            <div class="main-container">
-
-                <div style="visibility: visible; padding-top: 200px; text-align: center;" id="hide-me">
-                    <span>W</span>
-                    <span>E</span>
-                    <span>L</span>
-                    <span>C</span>
-                    <span>O</span>
-                    <span>M</span>
-                    <span>E</span>
                 </div>
 
-                <div id="content1" style="visibility: hidden;">
-                    <h1>It's great of you to stop by..</h1>
+
+                <div class="welcome-container">
+
+                    <div style="visibility: visible; padding-top: 200px; text-align: center;" id="hide-me">
+                        <span>W</span>
+                        <span>E</span>
+                        <span>L</span>
+                        <span>C</span>
+                        <span>O</span>
+                        <span>M</span>
+                        <span>E</span>
+                    </div>
                 </div>
 
-                <div id="content2" style="visibility: hidden;">
-                    <h1> if you want ..</h1>
-                </div>
+                <div class="main-container">
 
-                <div id="main-content" style="visibility: hidden;">
-
-                    <div class="shop">
-                        <span><a href="#">SHOP</a></span>
+                    <div id="content1" style="visibility: hidden;">
+                        <h1>It's great of you to stop by..</h1>
                     </div>
 
+                    <div id="content2" style="visibility: hidden;">
+                        <h1> if you want ..</h1>
+                    </div>
+
+                    <div id="main-content" style="visibility: hidden;">
+
+                        <div class="shop">
+                            <span><a href="#">SHOP</a></span>
+                        </div>
+
+                    </div>
 
                 </div>
-
-
-
-
 
                 <div>
                     <p class="footer">&copy;Ben</p>
                 </div>
-            </div>
 
 
-        </section>
 
+            </section>
+        </main>
     </body>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+
 
 </html>

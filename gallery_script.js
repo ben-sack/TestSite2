@@ -1,3 +1,5 @@
+const swup = new Swup();
+
 let theme = localStorage.getItem('theme')
 
 if(theme == null){
