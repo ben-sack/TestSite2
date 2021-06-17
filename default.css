@@ -21,30 +21,21 @@ html.is-animating .transition-fade{
 
 a{
     text-decoration: none;
-    color: var(--mainText);
+	color: var(--mainText);
 }
-a:hover{
-	animation: .8s shake infinite alternate;
-	transform: scale(1.3);
-	transition-duration: 1s;
-}
+
 a:visited{
     text-decoration: none;
     color: var(--mainText);
 }
 
-#menu-wrapper:hover{
-	overflow: hidden;
-
-}
-
-span, a, h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
 	font-family: 'Londrina Outline', cursive;
 	text-align: center;
 	font-weight: 500;
 }
 
-p, li, label, input, textarea{
+p, label, input, textarea{
 	font-family: 'Londrina Outline', cursive;
 	font-weight: 500;
 }
@@ -55,7 +46,11 @@ h3 {font-size: 28px;}
 h4 {font-size: 24px;}
 h5 {font-size: 20px;}
 h6 {font-size: 16px;}
-li {font-size: 38px;}
+
+ul li{
+	list-style-type: none;
+	margin: 0 0 230px 0;
+}
 
 body {
 	background-color: var(--mainColor);
@@ -72,25 +67,23 @@ body {
 }
 
 .menu{
-    font-size: 100px;
-    vertical-align: top;
-    margin: 0;
+	font-size: 65px;
     position: absolute;
-    top: 0;
-    right: 0;
-    padding-right: 25px;
+    top: 5px;
+    right: 20px;
 	overflow: hidden;
-	
+	display: block;
+
 }
-ul li{
-	list-style-type: none;
+
+.menu:hover{
+	animation: number2 3s infinite linear;
 }
 
 #nav-wrapper{
 	position: absolute;
-	top: 80px;
+	top: 50px;
 	right: 10px;
-	font-size: 30px;
 }
 
 #content1{
@@ -98,6 +91,11 @@ ul li{
 }
 #content2{
 	position: relative;
+}
+
+#appear{
+	opacity: 0;
+	animation: appear ease-in 2s forwards;
 }
 
 .footer{
@@ -297,38 +295,23 @@ ul li{
     background-color: #7e4c74;
 }
 
-#menu-wrapper:hover{
-	animation: .8s shake infinite alternate;
-}
-#li1:hover{
-	animation: .8s shake infinite alternate;
-}
+
+
 
 #li1{
 	opacity: 0;
 }
-.appear{
-	animation: appear 1s forwards;
-}
 #li2{
 	opacity: 0;
-}
-.appear{
-	animation: appear 3s forwards;
 }
 #li3{
 	opacity: 0;
 }
 .appear{
-	animation: appear 2s forwards;
+	animation: appear 3s forwards;
 }
 
-#li2:hover{
-	animation: .8s shake infinite alternate;
-}
-#li3:hover{
-	animation: .8s shake infinite alternate;
-}
+
 @keyframes shake {
 	0% { transform: skewX(-15deg); }
 	5% { transform: skewX(15deg); }
@@ -338,23 +321,33 @@ ul li{
 	100% { transform: skewX(0deg); }  
 }
 
-.shop {
+/* not needed while SHOP link is implemented within list */
+/* .shop {
 	position:absolute;
 	left: 5%;
 	bottom: 0%;
 	transform:translate(-50%,-50%);
 	text-align:center;
 	perspective:50vw;
+} */
+
+.spin:hover span{
+	animation: number 5s infinite linear;
 }
-  
-.shop span {
+
+.spin span {
 	display:block; 	
-	font-size: 3vw;
-	animation:number 5s linear infinite;
+	font-size: 30px;
 }
+
 @keyframes number {
 	100% { transform:rotateY(360deg); }
 }
+@keyframes number2 {
+	100% { transform:rotateX(360deg); }
+}
+
+
 @keyframes appear {
 	0% {opacity: 0;}
 	100%{opacity: 1;}

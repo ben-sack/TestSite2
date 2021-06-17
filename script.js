@@ -37,9 +37,13 @@ var menu = document.getElementById('menu-wrapper')
 // Shows main content after welcome message
 var content1 = document.getElementById('content1')
 var content2 = document.getElementById('content2')
-var main_content = document.getElementById('main-content')
 var delay_text = document.getElementById('delay-text')
 var delay_text2 = document.getElementById('delay-text2')
+
+
+
+
+
 
 //hide content function with delay + opacity to cause blur effect
 function hide() {
@@ -53,37 +57,7 @@ function hide() {
 		}
 	}
 }
-function hide2(){
-	if (content1 !== null) {
-		if (content2.style.visibility == 'visible') {
-			setTimeout(function () { content2.style.opacity = 0.8 }, 100)
-			setTimeout(function () { content2.style.opacity = 0.6 }, 200)
-			setTimeout(function () { content2.style.opacity = 0.4 }, 300)
-			setTimeout(function () { content2.style.opacity = 0.2 }, 400)
-			setTimeout(function () { content2.style.opacity = 0 }, 500)
-		}
-	}
-}
-// function hide3(){
-// 	if (main_content.style.visibility == 'visible'){
-// 		setTimeout(function(){main_content.style.opacity = 0.8},100)
-// 		setTimeout(function(){main_content.style.opacity = 0.6},200)
-// 		setTimeout(function(){main_content.style.opacity = 0.4},300)
-// 		setTimeout(function(){main_content.style.opacity = 0.2},400)
-// 		setTimeout(function(){main_content.style.opacity = 0},500)
-// 	}
-// }
 
-//show content1 after 7 seconds
-setTimeout(function(){content1.style.visibility = 'visible'}, 7700) 
-//hide content1 after 13 seconds
-setTimeout(hide, 9700)
-//show content2 after 13.5
-setTimeout(function(){content2.style.visibility = 'visible'}, 10200) 
-//hide content after 11.5
-setTimeout(hide2, 12300)
-//show main_content
-setTimeout(function(){main_content.style.visibility = 'visible'}, 13000)
 
 //Gallery
 var option = document.querySelector(".option")
