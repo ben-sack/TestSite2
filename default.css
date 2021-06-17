@@ -340,8 +340,8 @@ ul li{
 
 .shop {
 	position:absolute;
-	left:50%;
-	top:50%;
+	left: 5%;
+	bottom: 0%;
 	transform:translate(-50%,-50%);
 	text-align:center;
 	perspective:50vw;
@@ -349,7 +349,7 @@ ul li{
   
 .shop span {
 	display:block; 	
-	font-size:20vw;
+	font-size: 3vw;
 	animation:number 5s linear infinite;
 }
 @keyframes number {
