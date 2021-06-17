@@ -73,11 +73,11 @@ body {
     right: 20px;
 	overflow: hidden;
 	display: block;
+	animation: number2 15s infinite linear;
 
 }
 
 .menu:hover{
-	animation: number2 3s infinite linear;
 }
 
 #nav-wrapper{
@@ -85,17 +85,11 @@ body {
 	top: 50px;
 	right: 10px;
 }
-
 #content1{
 	position: relative;
 }
 #content2{
 	position: relative;
-}
-
-#appear{
-	opacity: 0;
-	animation: appear ease-in 2s forwards;
 }
 
 .footer{
@@ -295,20 +289,21 @@ body {
     background-color: #7e4c74;
 }
 
-
-
-
 #li1{
 	opacity: 0;
+	visibility: hidden;
 }
+
 #li2{
 	opacity: 0;
+	visibility: hidden;
 }
 #li3{
 	opacity: 0;
+	visibility: hidden;
 }
-.appear{
-	animation: appear 3s forwards;
+.fadeIn{
+	animation: fadeIn 3s forwards;
 }
 
 
@@ -348,10 +343,16 @@ body {
 }
 
 
-@keyframes appear {
-	0% {opacity: 0;}
-	100%{opacity: 1;}
+@keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  visibility: visible;
+	  opacity: 1;
+	}
 }
+
 @keyframes disapear {
 	100%{opacity: 1;}
 	0% {opacity: 0;}

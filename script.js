@@ -147,17 +147,17 @@ function toggleMenu(){
 
 	function showMenu(){
 		lis.forEach((li, idx) => {
-			li.classList.add('appear')
+			li.classList.add('fadeIn')
 		});
 	};
 
 	function hideMenu(){
 		lis.forEach((li, idx) => {
-			li.classList.remove('appear')	
+			li.classList.remove('fadeIn')	
 		});
 	};
 
-	var a = document.getElementsByClassName('appear')
+	var a = document.getElementsByClassName('fadeIn')
 	if (a.length == 0){
 		showMenu()
 	} else{
