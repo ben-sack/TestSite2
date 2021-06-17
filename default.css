@@ -107,7 +107,7 @@ ul li{
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	color: white;
+	color: var(--mainText);
 	text-align: center;
 }
 
@@ -117,7 +117,7 @@ ul li{
 
 @keyframes floatup {
 	from {transform: translateY(0);}
-	to {transform: translateY(-550px);}
+	to {transform: translateY(-90%);}
 }
 
 .welcome-container span {
